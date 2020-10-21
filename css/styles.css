@@ -1,0 +1,565 @@
+@font-face {
+    font-family: "Baumans";
+    src: url(https://fonts.google.com/?category=Sans+Serif&selection.family=Baumans) format("truetype");
+}
+
+body {
+  background:  #B59150;
+  background: -moz-linear-gradient(top,  #b08d57 0%, #b08d57 100%);
+}
+
+.modal {
+  background-color: beige;
+  border: 5px solid #802b00;
+  border-radius: 10px;
+  width: 400px;
+  height: 200px;
+  padding: 30px;
+  color: #262425;
+  position: fixed;
+top: 47%;
+left: 48%;
+margin-top: -100px; /* Negative half of height. */
+margin-left: -200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 28px;
+  font-family: 'Fredoka One';
+ font-weight: 200;
+ color: #262425;
+  transition: all 0.5s ease-in-out;
+/*   transition-delay: 0.7s; */
+  z-index: 20;
+  opacity: 1;
+}
+
+#modal-one {
+    opacity: 0;
+}
+
+#modal-two {
+    opacity: 0;
+}
+
+#modal-three {
+    opacity: 0;
+}
+
+.modal-close {
+  opacity: 0;
+}
+
+.close-button {
+  font-size: 18px;
+  font-family: 'Fredoka One';
+ font-weight: 200;
+ color: #262425;
+  padding-top: 20px;
+}
+
+.mod-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #802b00;
+  color: white;
+  font-size: 24px;
+  width: 50%;
+  height: 25%;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+
+.overlay {
+  width: 100%;
+  height: 100%;
+    background-image: linear-gradient(#BF953F, #FCF6bA, #B38728, #FBF5B7, #AA771C);
+background-attachment: fixed;
+  opacity: 1;
+}
+
+
+.lines {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:url(http://i.imgur.com/oIuK2.png);
+    opacity:0.1;
+}
+
+#logo {
+  position: relative;
+  width: 175px;
+  height: 175px;
+  background-color: grey;
+  border: 7px solid #262425;
+  border-radius: 5px;
+  margin-top: 5%;
+  margin-left: 5%;
+  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+    
+    linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+    hsl(0,0%,90%) 47%, 
+    hsl(0,0%,78%) 53%,
+    hsl(0,0%,70%)100%);
+}
+
+@media (min-width: 0px) and (max-width: 1500px) {
+  #logo {
+   display: none;
+  }
+}
+
+@media (min-width: 1501px) {
+  #logo {
+    display: block;
+  }
+}
+
+#screen-border {
+  width: 730px;
+  height: 530px;
+  border: 7px solid #262425;
+  border-radius: 10px;
+position: fixed;
+top: 50%;
+left: 50%;
+margin-top: -275px;
+margin-left: -375px;
+z-index: 5;
+padding: 10px;
+}
+
+.screen {
+  width: 700px;
+  height: 500px;
+/*   border: 5px solid gold; */
+position: fixed;
+top: 50%;
+left: 50%;
+margin-top: -250px;
+margin-left: -350px;
+/* z-index: 1; */
+z-index: 15;
+background-color: #78866b;
+opacity: .8;
+border: 4px solid #262425;
+}
+
+#screen-overlay {
+   width: 700px;
+  height: 500px;
+position: fixed;
+top: 50%;
+left: 50%;
+margin-top: -250px;
+margin-left: -350px;
+z-index: 5;
+background-color: #7b801A;
+opacity: .75;
+}
+
+img {
+  width:100px;
+  height:100px;
+}
+
+.pause {
+  animation-name: none;	
+}
+
+.object {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+/*   animation: objectAnimation 4.5s infinite step-end; */
+  animation: none;
+  transition: all .2s;
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes objectAnimation {
+  0% {
+  position: absolute; left: 0px; top: 0px;
+  }
+  
+  23% {
+ left: 125px; top: 125px;
+ opacity: 0;
+  }
+    
+  25% {
+ left: 125px; top: 125px;
+ opacity: 1;
+  }
+  
+  48% {
+ left: 250px; top: 250px;
+ opacity: 0;
+  } 
+  
+  50% {
+ left: 250px; top: 250px;
+ opacity: 1;
+  }
+  
+  73% {
+ left: 375px; top: 375px;
+ opacity: 0;
+  }
+  
+   75% {
+ left: 375px; top: 375px;
+ opacity: 1;
+  }
+  
+ 100% {
+ left: 500px; top: 500px;
+ opacity: 0;
+  }
+ 
+}
+
+.object-two {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+/*   animation: objectAnimationTwo 5s infinite step-end; */
+  animation: none;
+  transition: all .2s;
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes objectAnimationTwo {
+   0% {
+  position: absolute; left: 145px; top: 0px;
+  }
+  
+  23% {
+ left: 150px; top: 125px;
+ opacity: 0;
+  }
+    
+  25% {
+ left: 150px; top: 125px;
+ opacity: 1;
+  }
+  
+  48% {
+ left: 200px; top: 250px;
+ opacity: 0;
+  } 
+  
+  50% {
+ left: 200px; top: 250px;
+ opacity: 1;
+  }
+  
+  73% {
+ left: 250px; top: 375px;
+ opacity: 0;
+  }
+  
+   75% {
+ left: 250px; top: 375px;
+ opacity: 1;
+  }
+  
+ 100% {
+ left: 305px; top: 500px;
+ opacity: 0;
+  }
+ 
+}
+
+.object-three {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+/*   animation: objectAnimationThree 3.5s infinite step-end; */
+  animation: none;
+  transition: all .2s;
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes objectAnimationThree {
+  0% {
+  position: absolute; left: 80px; top: 0px;
+  }
+  
+  23% {
+ left: 300px; top: 125px;
+ opacity: 0;
+  }
+    
+  25% {
+ left: 300px; top: 125px;
+ opacity: 1;
+  }
+  
+  48% {
+ left: 400px; top: 250px;
+ opacity: 0;
+  } 
+  
+  50% {
+ left: 400px; top: 250px;
+ opacity: 1;
+  }
+  
+  73% {
+ left: 500px; top: 375px;
+ opacity: 0;
+  }
+  
+   75% {
+ left: 500px; top: 375px;
+ opacity: 1;
+  }
+  
+  100% {
+ left: 600px; top: 500px;
+  opacity: 0;
+  }
+ 
+}
+
+.mini-start {
+    width: 10%;
+  font-size: 16px;
+  padding: 5px 5px 5px 5px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 15px;
+  border: 7px solid #802b00;
+  background-color: #A0A0A0;
+  box-shadow: inset 0 0 3px #595959;
+  font-family: 'Fredoka One';
+  font-weight: 200;
+  color: #262425;
+ position: fixed;
+  bottom: 40px;
+  left: 44%;
+  text-align: center;
+}
+
+@media (min-width: 0px) and (max-width: 1500px) {
+  .mini-start {
+   display: block;
+  }
+}
+
+@media (min-width: 1501px) {
+  .mini-start {
+    display: none;
+  }
+}
+
+ .menu {
+  position: fixed;
+  right: 0;
+  top: 23%;
+  width: 320px;
+  height: 300px;
+/*   border: 5px solid gold;
+  background-color: orange; */
+  }
+
+@media (min-width: 0px) and (max-width: 1500px) {
+  .menu {
+   display: none;
+  }
+}
+
+@media (min-width: 1501px) {
+  .menu {
+    display: block;
+  }
+}
+
+.start-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-item {
+  width: 35%;
+  font-size: 16px;
+  padding: 5px 5px 5px 15px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 15px;
+  border: 7px solid #802b00;
+  background-color: #A0A0A0;
+  box-shadow: inset 0 0 3px #595959;
+  font-family: 'Fredoka One';
+  font-weight: 200;
+  color: #262425;
+}
+
+.menu-item:hover {
+  background-color: #bababa;
+}
+
+.start-light {
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: #262626;
+  box-shadow: inset 0 0 10px #000000;
+  margin-left: 15px;
+}
+
+.power-on {
+background-color: white;
+  box-shadow: 0px 0px 10px 5px #ff1e00, inset 0px 0px 10px 5px #ff1e00;
+  transition: .6s;
+  animation: flicker 2.5s linear infinite;
+}
+  
+  @keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+		opacity: .99;
+		text-shadow: -1px -1px 0 $outline, 1px -1px 0 $outline, -1px 1px 0 $outline, 1px 1px 0 $outline, 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+		text-shadow: none;
+    animation: flicker 3s linear infinite;
+	}
+}
+
+  
+.button-container {
+  position: fixed;
+  width: 100%;
+  bottom: 13%;
+}
+
+@media (min-width: 0px) and (max-width: 1500px) {
+  .button-container {
+   display: none;
+  }
+}
+/* Main container - desktops */
+@media (min-width: 1501px) {
+  .button-container {
+    display: block;
+  }
+}
+
+.container-bar {
+ display: flex;
+ justify-content: space-between;
+}
+
+#left-button {
+  width: 135px;
+  height: 135px;
+  background-color: #ff4d4d;
+  border-radius: 100px;
+  z-index: 4;
+  margin-left: 7%;
+  border: 10px solid #802b00;
+  box-shadow: inset 0 0 20px #802b00;
+}
+
+#right-button {
+  width: 135px;
+  height: 135px;
+  background-color: #ff4d4d;
+  border-radius: 100px;
+  z-index: 2;
+  margin-right: 8%;
+  border: 10px solid #802b00;
+  box-shadow: inset 0 0 20px #802b00;
+}
+
+.direction-text {
+ font-family: 'Fredoka One';
+ font-size: 20px;
+ font-weight: 200;
+ color: #262425;
+}
+
+#left-text {
+  margin-left: 9.75%;
+}
+
+#right-text {
+  margin-right: 9.75%;
+}
+
+#human {
+  width: 100px;
+  height: 100px;
+/*   background-color: blue; */
+  position: relative;
+  z-index: 4;
+  left: 375px; 
+  top: 375px;
+/*   visibility: visible; */
+  visibility: hidden;
+}
+
+.left-move {
+  top: 200px;
+}
+
+.right-move {
+  top: 600px;
+}
+
+.websiteFrame {
+   position: fixed;
+   z-index: 990;
+   background-color: #802b00;
+   box-shadow: inset 0 2 1px #000000;
+}
+
+#websiteFrameTop {
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 10px;
+}
+
+#websiteFrameRight {
+   top: 0;
+   bottom: 0;
+   right: 0;
+   width: 10px;
+}
+
+#websiteFrameBottom {
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 10px;
+}
+
+#websiteFrameLeft {
+   top: 0;
+   bottom: 0;
+   left: 0;
+   width: 10px;
+}
