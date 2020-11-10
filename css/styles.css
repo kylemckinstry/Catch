@@ -19,7 +19,7 @@ body {
   position: fixed;
 top: 47%;
 left: 48%;
-margin-top: -100px; /* Negative half of height. */
+margin-top: -100px;
 margin-left: -200px;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,6 @@ margin-left: -200px;
  font-weight: 200;
  color: #262425;
   transition: all 0.5s ease-in-out;
-/*   transition-delay: 0.7s; */
   z-index: 20;
   opacity: 1;
 }
@@ -124,6 +123,31 @@ background-attachment: fixed;
   }
 }
 
+#instructions {
+  position: relative;
+  text-align: center;
+  color: #262425;
+  font-size: 12px;
+  font-family: 'Fredoka One';
+  font-weight: 50;
+  width: 180px;
+  height: 175px;
+  left: 5.5%;
+  margin-top: 1%;
+}
+
+@media (min-width: 0px) and (max-width: 1500px) {
+  #instructions {
+   display: none;
+  }
+}
+
+@media (min-width: 1501px) {
+  #instructions {
+    display: block;
+  }
+}
+
 #screen-border {
   width: 730px;
   height: 530px;
@@ -141,13 +165,11 @@ padding: 10px;
 .screen {
   width: 700px;
   height: 500px;
-/*   border: 5px solid gold; */
 position: fixed;
 top: 50%;
 left: 50%;
 margin-top: -250px;
 margin-left: -350px;
-/* z-index: 1; */
 z-index: 15;
 background-color: #78866b;
 opacity: .8;
@@ -183,7 +205,6 @@ img {
   top: 0;
   left: 0;
   z-index: 2;
-/*   animation: objectAnimation 4.5s infinite step-end; */
   animation: none;
   transition: all .2s;
   visibility: visible;
@@ -239,7 +260,6 @@ img {
   top: 0;
   left: 0;
   z-index: 2;
-/*   animation: objectAnimationTwo 5s infinite step-end; */
   animation: none;
   transition: all .2s;
   visibility: visible;
@@ -295,7 +315,6 @@ img {
   top: 0;
   left: 0;
   z-index: 2;
-/*   animation: objectAnimationThree 3.5s infinite step-end; */
   animation: none;
   transition: all .2s;
   visibility: visible;
@@ -323,22 +342,22 @@ img {
   } 
   
   50% {
- left: 400px; top: 250px;
- opacity: 1;
+  left: 400px; top: 250px;
+  opacity: 1;
   }
   
   73% {
- left: 500px; top: 375px;
- opacity: 0;
+  left: 500px; top: 375px;
+  opacity: 0;
   }
   
    75% {
- left: 500px; top: 375px;
- opacity: 1;
+  left: 500px; top: 375px;
+  opacity: 1;
   }
   
   100% {
- left: 600px; top: 500px;
+  left: 600px; top: 500px;
   opacity: 0;
   }
  
@@ -356,8 +375,8 @@ img {
   font-family: 'Fredoka One';
   font-weight: 200;
   color: #262425;
- position: fixed;
-  bottom: 40px;
+  position: fixed;
+  bottom: 0.4%;
   left: 44%;
   text-align: center;
 }
@@ -377,11 +396,9 @@ img {
  .menu {
   position: fixed;
   right: 0;
-  top: 23%;
+  top: 20%;
   width: 320px;
   height: 300px;
-/*   border: 5px solid gold;
-  background-color: orange; */
   }
 
 @media (min-width: 0px) and (max-width: 1500px) {
@@ -447,12 +464,11 @@ background-color: white;
     animation: flicker 3s linear infinite;
 	}
 }
-
   
 .button-container {
   position: fixed;
   width: 100%;
-  bottom: 13%;
+  bottom: 7%;
 }
 
 @media (min-width: 0px) and (max-width: 1500px) {
@@ -460,7 +476,7 @@ background-color: white;
    display: none;
   }
 }
-/* Main container - desktops */
+
 @media (min-width: 1501px) {
   .button-container {
     display: block;
@@ -512,12 +528,10 @@ background-color: white;
 #human {
   width: 100px;
   height: 100px;
-/*   background-color: blue; */
   position: relative;
   z-index: 4;
   left: 375px; 
   top: 375px;
-/*   visibility: visible; */
   visibility: hidden;
 }
 
