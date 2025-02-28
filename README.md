@@ -1,8 +1,8 @@
-One of my earlier demo projects where I created a small landing page replicating a retro Nintendo Game & Watch.
+One of my earlier demo projects while doing General Assembly's Front-end Web Devlopment course in 2020. I created a small landing page replicating a retro Nintendo Game & Watch.
 
 The project is built in HTML, CSS and vanilla JavaScript.
 
-I had a lot of fun creating the graphic design assets and playing with the detectKey, setInterval and positions.
+I had a lot of fun creating the charming graphic design assets and playing with the detectKey, setInterval and positions.
 
 ----
 Controls:
